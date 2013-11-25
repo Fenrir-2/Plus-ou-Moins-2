@@ -1,0 +1,17 @@
+Creee par : Nicolas Fonnier
+Numero de version:1.6
+Date de compilation: 18\11\2013
+Nom : Nicolas Fonnier
+Score : 1
+Niveau : 4
+
+Créé par: Nicolas Fonnier
+Numero de version:1.9
+Date de compilation: 18\11\2013
+Nom: Nicolas Fonnier
+Score: 1
+Niveau: 4
+Le nombre était: 959
+Les limites était: 1, 1000
+
+
