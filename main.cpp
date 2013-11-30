@@ -7,11 +7,11 @@ TODO List:
 
 int main(int argc, char **argv)
 {
-    system("cls");                //Histoire que rien ne gêne si le jeu est lancé depuis la commande
+    system("cls");                //Histoire que rien ne gï¿½ne si le jeu est lancï¿½ depuis la commande
     nomJoueur1 = "";             //Variable globale pour le nom du premier joueur
     nomJoueur2 = "";            //Variable globale pour le nom du second joueur
     nbCoupsChoisi= 0;          //Variable globale pour le nombre de coups
-    limiteMax = 0;            //Variable globale pour le niveau de difficulté
+    limiteMax = 0;            //Variable globale pour le niveau de difficultï¿½
     nbJoueurs = 0;           //Variable globale pour le nombre de joueur
     afficherInfos(argv[0]); //Affichage des infos de versions
     bool continuer = true;
@@ -32,35 +32,34 @@ int main(int argc, char **argv)
             {
                 continuer = false;
             }
-              //Si l'utilisateur demande à quitter, afficherFin() retourne 2, et on arrête la boucle
-             //Ca évite que, si l'utilisateur veut lire le fichier de score, donc que afficherFin()
-            //retourne 3 on arrête la boucle
+              //Si l'utilisateur demande ï¿½ quitter, afficherFin() retourne 2, et on arrï¿½te la boucle
+             //Ca ï¿½vite que, si l'utilisateur veut lire le fichier de score, donc que afficherFin()
+            //retourne 3 on arrï¿½te la boucle
         }while(continuerMenuFin == 3);
 
     }while(continuer);
 
     /*
-    Puisque la boucle s'est arrêté, l'utilisateur a fini.
+    Puisque la boucle s'est arrï¿½tï¿½, l'utilisateur a fini.
     On quitte donc le programme
     */
     return 0;
 }
-//Fonction main(), plutôt aisé à comprendre
+//Fonction main(), plutï¿½t aisï¿½ ï¿½ comprendre
 
 void afficherInfos(char* chemin = "Chemin Inconnu")
 {
     system("Title Plus ou Moins 2 v2.1"); //Changement du titre
     system("color 0a");                  //Changement de la couleur
-    string creatorName = "Nicolas Fonnier";
-    demanderNom();     //On demande le nom à l'utilisateur
+    demanderNom();     //On demande le nom ï¿½ l'utilisateur
     choisirCouleur(); //On lui demande de choisir la couleur
     system("cls");
-    cout << "Projet developpe par: " << APP_CREATOR << endl;
+    cout << "Projet developpe par: Nicolas Fonnier" << endl;
     cout << "Chemin: " << chemin << endl;
     cout << "Numero de version: " << MAJOR_VERSION << "." << MINOR_VERSION << endl;
     cout << "Date de compilation: " << COMP_DAY << "\\" << COMP_MONTH << "\\" << COMP_YEAR << endl;
-    system("pause"); //Pour s'assurer que les infos ont bien été vues
-    system("cls"); //On efface l'écran pour que ce soit plus lisible
+    system("pause"); //Pour s'assurer que les infos ont bien ï¿½tï¿½ vues
+    system("cls"); //On efface l'ï¿½cran pour que ce soit plus lisible
 
 }
 //Affiche les informations du projet
@@ -71,14 +70,14 @@ int afficherMenu()
     cout << "Bonjour et bienvenue dans Plus ou Moins dans sa 2eme version en C++!" << endl;
     cout << "Le but est toujours le meme, trouvez le nombre!" << endl;
     cout << "Bonne chance!" << endl;
-    //Explication des règles
+    //Explication des rï¿½gles
 
-    system("pause"); //Pour s'assurer que l'utilisateur lise bien les règles
+    system("pause"); //Pour s'assurer que l'utilisateur lise bien les rï¿½gles
 
     cout << endl << endl;
 
     int nbCoupsMax = demanderNbCoups();
-    //C'est assez clair là non?
+    //C'est assez clair lï¿½ non?
 
     int nombreCherche = menuNbJoueur();
     if(nomJoueur1 == "Nicolas Fonnier" || nomJoueur2 == "Nicolas Fonnier")
@@ -104,7 +103,7 @@ int afficherMenu()
             case 0:
                 score ++;
                 cout << "Bien joue, vous avez gagne en " << score << " coups!" << endl << endl;
-                ecrireFichier(score, nombreCherche, limiteMax); //L'utlisateur a fini, on écrit les données
+                ecrireFichier(score, nombreCherche, limiteMax); //L'utlisateur a fini, on ï¿½crit les donnï¿½es
 
             break;
 
@@ -127,7 +126,7 @@ int afficherMenu()
             case 2:
                 score++;
                 if((nbCoupsMax - score) == 0)
-                //Le fait de mettre "nbCoupsMax - score" permet d'éviter de déclarer un int coupsRestant qui serait égal à coupsMax et qui serait décrémenté
+                //Le fait de mettre "nbCoupsMax - score" permet d'ï¿½viter de dï¿½clarer un int coupsRestant qui serait ï¿½gal ï¿½ coupsMax et qui serait dï¿½crï¿½mentï¿½
                 {
                     cout << endl;
                     cout << "Vous avez perdu... Dommage!" << endl;
@@ -137,7 +136,7 @@ int afficherMenu()
                 {
                     cout << "C'est moins!" << endl;
                     cout << "Il vous reste : " << nbCoupsMax - score << " coups" << endl << endl;
-                    //Même chose, c'est mieux que de déclarer un int
+                    //Mï¿½me chose, c'est mieux que de dï¿½clarer un int
                 }
 
             break;
@@ -158,7 +157,7 @@ int nombreAleatoire(int max, int min)
 
     return nombreRenvoye;
 }
-//Ma petite fonction pour les nombres aléatoires
+//Ma petite fonction pour les nombres alï¿½atoires
 
 int comparerNombre(int i, int m)
 {
@@ -187,33 +186,30 @@ int comparerNombre(int i, int m)
 
 int ecrireFichier(int score, int nombreCherche, int limiteRand)
 {
-    string creatorName = "Nicolas Fonnier";
-
-
     ofstream fichierScore("Score.txt", ios::out | ios::app);
 
     if(fichierScore)
     {
-        fichierScore << "Créé par: " << APP_CREATOR << endl;
+        fichierScore << "Crï¿½ï¿½ par:  Nicolas Fonnier" << endl;
         fichierScore << "Numero de version:" << MAJOR_VERSION << "." << MINOR_VERSION << endl;
         fichierScore << "Date de compilation: " << COMP_DAY << "\\" << COMP_MONTH << "\\" << COMP_YEAR << endl;
         fichierScore << "Nom: " << nomJoueur1 << endl;
         if(nbJoueurs == 2)
         {
-            fichierScore << "2ème joueur: " << nomJoueur2 << endl;
+            fichierScore << "2ï¿½me joueur: " << nomJoueur2 << endl;
         }
         fichierScore << "Score: " << score << endl;
         fichierScore << "Niveau: " << nbCoupsChoisi << endl;
-        fichierScore << "Le nombre était: " << nombreCherche << endl;
-        fichierScore << "Les limites était: 1, " << limiteRand << endl << endl << endl;
-        //On écrit les infos de version, le score, le nom et le niveau de difficulté
+        fichierScore << "Le nombre ï¿½tait: " << nombreCherche << endl;
+        fichierScore << "Les limites ï¿½tait: 1, " << limiteRand << endl << endl << endl;
+        //On ï¿½crit les infos de version, le score, le nom et le niveau de difficultï¿½
         fichierScore.close(); //Et on ferme le fichier
         return 1;
     }
 
     else
     {
-        cout << "Un problème est survenu durant l'ouverture" << endl;
+        cout << "Un problï¿½me est survenu durant l'ouverture" << endl;
         return -1;
     }
 }
@@ -256,7 +252,7 @@ int lireFichier()
 int menuNbJoueur()
 {
     system("cls");
-    bool choixNbJoueur = false; //Booléen pour la boucle principale
+    bool choixNbJoueur = false; //Boolï¿½en pour la boucle principale
     int nombreCherche = 0;
     //Initialisation des 2 int
 
@@ -269,9 +265,9 @@ int menuNbJoueur()
         {
             limiteMax = demanderNiveau();
             cout << "Mode solo actif! Nombre aleatoire genere!" << endl;
-            nombreCherche = nombreAleatoire(limiteMax, MIN); //Génération du nombre
-            system("cls"); //On prépare l'écran pour le jeu
-            choixNbJoueur = true; //Et on arrête la boucle
+            nombreCherche = nombreAleatoire(limiteMax, MIN); //Gï¿½nï¿½ration du nombre
+            system("cls"); //On prï¿½pare l'ï¿½cran pour le jeu
+            choixNbJoueur = true; //Et on arrï¿½te la boucle
         }
 
         else if(nbJoueurs == 2)
@@ -282,7 +278,7 @@ int menuNbJoueur()
             getline(cin, nomJoueur2);
             cout << "Entrez un nombre!" << endl;
             cin >> nombreCherche; //L'utilisateur 2 rentre un nombre
-            system("cls"); //On prépare l'écran
+            system("cls"); //On prï¿½pare l'ï¿½cran
             choixNbJoueur = true;
         }
 
@@ -292,7 +288,7 @@ int menuNbJoueur()
         }
     }while(choixNbJoueur == false);
 
-    return nombreCherche; //Et on revoie le nombre à chercher
+    return nombreCherche; //Et on revoie le nombre ï¿½ chercher
 }
 
 void demanderNom()
@@ -305,20 +301,20 @@ void demanderNom()
         cout << "Welcome, master of C++! Have fun!" << endl;
         system("pause");
     }
-    //Pas vraiment un cheat code, mais c'est toujours marrant à faire :)
+    //Pas vraiment un cheat code, mais c'est toujours marrant ï¿½ faire :)
     system("cls");
 }
-//Y a sérieusement besoin d'explication ?
+//Y a sï¿½rieusement besoin d'explication ?
 
 int demanderNbCoups()
 {
-    system("cls"); //On vide l'écran
+    system("cls"); //On vide l'ï¿½cran
     cout << "Choisissez le nombre de coups:" << endl;
     cout << "1. 1000 essais" << endl;
     cout << "2. 10 essais" << endl;
     cout << "3. 5 essais" << endl;
     cout << "4. HARD-CORE! (1 essai)" << endl;
-    //Présentation des niveaux de difficulté
+    //Prï¿½sentation des niveaux de difficultï¿½
     cin >> nbCoupsChoisi;
 
     switch (nbCoupsChoisi)
@@ -348,14 +344,14 @@ int demanderNbCoups()
             return 1;
         break;
     }
-    //Sérieusement, faut que j'explique?
+    //Sï¿½rieusement, faut que j'explique?
 }
-//Reglage du nombre de coups. Le nombre max de coup (nbCoupsMax) est défini par le return
+//Reglage du nombre de coups. Le nombre max de coup (nbCoupsMax) est dï¿½fini par le return
 
 int demanderNiveau()
 {
     int nvDiffChoisi = 0;
-    system("cls"); //On vide l'écran
+    system("cls"); //On vide l'ï¿½cran
     cout << "Choisissez les limites!" << endl;
     cout << "1.Easy: de 1 a 50" << endl;
     cout << "2.Normal: de 1 a 100" << endl;
@@ -386,7 +382,7 @@ int demanderNiveau()
             return MAX;
         break;
     }
-    //La limite est définie par le return
+    //La limite est dï¿½finie par le return
 
 }
 
@@ -410,7 +406,7 @@ int afficherFin()
 
 void choisirCouleur()
 {
-    system("color 0A"); //Couleur verte sur fond noir, pour débuter
+    system("color 0A"); //Couleur verte sur fond noir, pour dï¿½buter
     int choixCouleur = 0;
 
     cout << "Choisissez votre couleur:" << endl;
