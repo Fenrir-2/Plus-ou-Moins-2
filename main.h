@@ -7,17 +7,16 @@
 //Tout les includes
 
 using namespace std;
-//Utile pour éviter de se casser la tête avec des erreurs de compilation inhabituelles
+//Utile pour ï¿½viter de se casser la tï¿½te avec des erreurs de compilation inhabituelles
 
-#define MAJOR_VERSION 2              //Pouh... Enfin la version 2... Que de chemin...
-#define MINOR_VERSION 1             //Avant de changer de version, changer aussi le titre dans afficherInfos()!
-#define COMP_DAY 24                //Jour de la compilation
-#define COMP_MONTH 11             //Mois de la compilation
-#define COMP_YEAR 2013           //Année de la compilation
-#define APP_CREATOR creatorName //Ceci est inutile
+#define MAJOR_VERSION 2             //Pouh... Enfin la version 2... Que de chemin...
+#define MINOR_VERSION 1            //Avant de changer de version, changer aussi le titre dans afficherInfos()!
+#define COMP_DAY 24               //Jour de la compilation
+#define COMP_MONTH 11            //Mois de la compilation
+#define COMP_YEAR 2013          //Annï¿½e de la compilation
 #define MAX 100                //Maximum pour nombreAleatoire()
 #define MIN 1                 //Minimum pour nombreAleatoire()
-                             //Tout les define nécéssaire pour afficherInfos() et ecrireFichier(int)
+                             //Tout les define nï¿½cï¿½ssaire pour afficherInfos() et ecrireFichier(int)
 
 void afficherInfos(char* chemin);
 int afficherMenu();
